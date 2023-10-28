@@ -36,7 +36,7 @@ def format_data(df, avg_days=5):
     df["rsi"] = tb.RSI(df["Close"], timeperiod=long_ind)
     df["adxr"] = tb.ADXR(df["High"], df["Low"], df["Close"], timeperiod=long_ind)
     df["aroon_up"], df["aroon_down"] = tb.AROON(df["High"], df["Low"], timeperiod=long_ind)
-    df["cci"] = tb.CCI(df["High"], df["Low"], df["Close"], timeperiod=long_ind)
+
 
     # OSCILLATOR INDICATORS
     df["stoch"], df["stoch_signal"] = tb.STOCH(df["High"], df["Low"], df["Close"])
